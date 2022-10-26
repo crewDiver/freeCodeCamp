@@ -1,7 +1,12 @@
-const myDog = {
-  "name": "Happy Coder",
-  "legs": 4,
-  "tails": 1,
-  "friends": ["freeCodeCamp Campers"]
-};
-myDog.bark = "woof"
+// Only change code below this line
+function countdown(n){
+  if (n < 1) {
+    return []
+  } else {
+    const array = count(n - 1)
+    array.unshift(n)
+    return array
+  }
+  
+}
+// Only change code above this line
