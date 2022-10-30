@@ -3,40 +3,44 @@
   <head>
     <meta charset="utf-8">
     <title>Survey Form</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles3.css">
   </head>
   <body>
     <h1 id="title">Survey Form</h1>
     <p id="description">Please fill out this form with the required information</p>
     <form id="survey-form">
       <fieldset>
-        <label for="name-label"><input id="name" type="text" placeholder="Fill your name"></label>
-        <label for="email-label"><input id="email" type="email" placeholder="Fill your email address"></label>
-        <label for="number-label"><input id="number" type="number" min="0" max="120" placeholder="Fill your age"></label>
-        <label>
-          <select id="dropdown">
-            <option></option>
-            <option></option>
-            <option></option>
+        <label for="name-label">Your name: <input id="name" type="text" name="name" placeholder="Fill your name"></label>
+        <label for="email-label">Your email address: <input id="email" type="email" name="email" placeholder="Fill your email address"></label>
+        <label for="number-label">Your age: <input id="number" type="number" name="age" min="0" max="120" placeholder="Fill your age"></label>
+        </fieldset>
+        <fieldset>
+        <label for="marital-status">Your marital status: 
+          <select id="dropdown" name="dropdown">
+            <option value="">(select one)</option>
+            <option value="1">Married</option>
+            <option value="2">Single</option>
           </select>
         </label>
-        <label>
-          <input type="radio" name="sex">
+        <label for="male">
+          <input id="male" type="radio" name="sex"> Male
         </label>
-        <label>
-          <input type="radio" name="sex">
+        <label for="female">
+          <input id="female" type="radio" name="sex"> Female
         </label>
-        <label>
-          <input type="checkbox" name="pet">
+        <label for="cat">Do you have a pet? 
+          <input id="cat" type="checkbox" name="pet"> Cat
         </label>
-        <label>
-          <input type="checkbox" name="pet">
+        <label for="dog">
+          <input id="dog" type="checkbox" name="pet"> Dog
         </label>
-        <label>
-          <input type="checkbox" name="pet">
+        <label for="none">
+          <input id="none" type="checkbox" name="pet"> None
         </label>
-        <label>
-          <textarea name="comments" rows ="3" cols="30" placeholder="I liked your small survey"></textarea>
+      </fieldset>
+      <fieldset>
+        <label for="comments">Leave your comments here: 
+          <textarea  id="comments" name="comments" rows ="3" cols="30" placeholder="I liked your small survey"></textarea>
         </label>      
       </fieldset>
       <input id="submit" type="submit">
