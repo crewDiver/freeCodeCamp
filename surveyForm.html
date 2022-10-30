@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <h1 id="title">Survey Form</h1>
@@ -11,12 +12,34 @@
       <fieldset>
         <label for="name-label"><input id="name" type="text" placeholder="Fill your name"></label>
         <label for="email-label"><input id="email" type="email" placeholder="Fill your email address"></label>
-        <label for="number-label"><input id="number" type="number" min="7" max="11" placeholder="Fill your number"></label>
+        <label for="number-label"><input id="number" type="number" min="0" max="120" placeholder="Fill your age"></label>
         <label>
           <select id="dropdown">
+            <option></option>
+            <option></option>
+            <option></option>
           </select>
         </label>
+        <label>
+          <input type="radio" name="sex">
+        </label>
+        <label>
+          <input type="radio" name="sex">
+        </label>
+        <label>
+          <input type="checkbox" name="pet">
+        </label>
+        <label>
+          <input type="checkbox" name="pet">
+        </label>
+        <label>
+          <input type="checkbox" name="pet">
+        </label>
+        <label>
+          <textarea name="comments" rows ="3" cols="30" placeholder="I liked your small survey"></textarea>
+        </label>      
       </fieldset>
+      <input id="submit" type="submit">
     </form>
   </body>
 </html>
