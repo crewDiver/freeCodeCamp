@@ -1,14 +1,14 @@
-let user = {}
-user.name = "John"
+let user = {} //это объект
+user.name = "John" //добавление ключа и свойства
 user.surname = "Smith"
-user.name = "Peter"
-delete user.name 
+user.name = "Peter" //изменение ключа и свойства
+delete user.name  //удаление ключа
 let object = {
     price: 200, 
     count: 4
 }
 let sum = 1
-for (let key in object) {
+for (let key in object) { //перебор всех ключей в объекте
     sum *= object[key]
 }
 console.log(sum)
@@ -22,7 +22,7 @@ let salaries = {
     sum2 += salaries[key]
   }
   console.log(sum2)
-  console.log(typeof(100))
+  console.log(typeof(100)) //typeof() возвращает строкой вид переменной в скобках
 //   Создайте функцию multiplyNumeric(obj), которая умножает все числовые свойства объекта obj на 2.
 // // до вызова функции
 let menu = {
@@ -46,13 +46,13 @@ function multiplyNumeric(obj) {
 }
 multiplyNumeric(menu)
 console.log(menu)
-console.log(Math.floor(2.9))
-console.log(Math.ceil(2.3))
-console.log(Math.round(2.5))
+console.log(Math.floor(2.9)) //округление в меньшую сторону
+console.log(Math.ceil(2.3)) //округление в большую сторону
+console.log(Math.round(2.5)) //математически верное округление
 let num = 12.34
-console.log(num.toFixed(1))
-console.log(Number.isFinite("number"))
-console.log(Math.random())
+console.log(num.toFixed(1)) //окгругление до знака после запятой
+console.log(Number.isFinite("number")) //метод Number.isFinite проверяет является ли переменная числом и возвращает булево значение
+console.log(Math.random()) //возвращает случайное число от 0 до 1
 // Создайте функцию readNumber, которая будет запрашивать ввод числового значения до тех пор,
 // пока посетитель его не введёт.
 
@@ -71,13 +71,14 @@ console.log(Math.random())
 //     return a
 // }
 // console.log(readNumber()) 
-console.log(`сумма: ${2+2}`)
-for (let char of "Hello") {
+console.log(`сумма: ${2+2}`) //в обратных ковычках можно писать любой текст, даже код и он будет просто строкой. 
+//$() эта функция исполнит код в скобках
+for (let char of "Hello") { //перебор символов в строке
     console.log(char)
 }
-console.log("String".toUpperCase())
-console.log("STRING".toLowerCase())
+console.log("String".toUpperCase()) //делает регистр в строке верхним
+console.log("STRING".toLowerCase()) //делает регистр низким
 let str = "Hello. My name is Anton."
-console.log(str.indexOf("name"))
-console.log(str.includes("Anton"))
+console.log(str.indexOf("name")) //возвращает индекс первого символа, с которого начинается искомая часть строки
+console.log(str.includes("Anton")) //проверяет есть ли искомый кусок строки в исходной строке и возвращает булево значение
 console.log(str.endsWith("ton."))
