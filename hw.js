@@ -104,7 +104,7 @@ let fruits = ["apple",
 "banana",
 "watermelon"
 ]
-fruits.splice(0, 0, "melon", "strawberries")
+fruits.splice(0, 0, "melon", "strawberries") //удаляет эелемнты массива и может их заменить на новые
 let yes = fruits.slice(0, 2) //копирует в себя элементы массива. первое число - это индекс первого 
 //элемента, а второе число это кол-во элементов
 console.log(fruits)
