@@ -102,7 +102,8 @@ function sumInput() {
 console.log(sumInput())
 let fruits = ["apple",
 "banana",
-"watermelon"
+"watermelon",
+"apple"
 ]
 fruits.splice(0, 0, "melon", "strawberries") //удаляет эелемнты массива и может их заменить на новые
 let yes = fruits.slice(0, 2) //копирует в себя элементы массива. первое число - это индекс первого 
@@ -112,4 +113,103 @@ let no = fruits.concat(yes) //позволяет объединять масси
 console.log(no)
 fruits.forEach((item, index) => { //перебирает все элементы массива
     console.log(item, index)
-}); 
+});
+console.log(fruits.includes("apple"))//возвращает булево значение при проверке в массиве на нахождение элемента
+console.log(fruits.indexOf("apple"))//вовзращает индекс элемента в массиве
+console.log(fruits.lastIndexOf("apple"))//возвращает индекс послежнего указанного элемента
+let users = [
+    {id: 1, name: "Вася"},
+    {id: 2, name: "Петя"},
+    {id: 3, name: "Маша"},
+    {id: 1, name: "Маша"}
+  ];
+console.log(users.find((item) => { //находит первый попавшийся элемент, который подходит по условию
+    return item.id == 1
+}))
+console.log(users.filter((item) => { //находит все элементы, подходящие по условию и возвращает массив с ними
+    return item.id == 1
+}))
+let newFruits = fruits.map((item) => {//применяет функцию к каждому элементу, возвращает новый массив с новыми элементами
+    return item.length
+})
+console.log(newFruits)
+let numb = [1, 2, 3, 8, 6, 1]
+console.log(numb.sort((a, b) => { //сортирует элементы в массиве. изменяет оригинальный массив 
+    return a - b//от меньшего к большему
+}))
+console.log(numb.sort((a, b) => {
+    return b - a//от большего к меньшему
+}))
+let vasya = { name: "Вася", age: 25 };
+let petya = { name: "Петя", age: 30 };
+let masha = { name: "Маша", age: 28 };
+
+let usersAge = [ vasya, petya, masha ];
+console.log(usersAge.sort((a, b) => {
+    return a.age - b.age
+}))
+console.log(numb.reverse())//переворачивает массив задом наперёд
+let names = "Ann, Nick, Anton"
+let namesArray = names.split(",")//по указанному разделителю переводит строку в массив элементов
+console.log(namesArray)
+let word = "word"
+console.log(word.split(""))//разделяет по символам
+console.log(namesArray.join(":"))//из массива делает строку с указанным разделителм
+//Напиши функцию camelize(str), которая преобразует строки вида «my-short-string» в «myShortString».
+function camelize(str) {
+    let array = str.split("-")
+    let newArray = array.map((item, index) => {
+        if (index == 0) {
+            return item
+        } else {
+            return item[0].toUpperCase() + item.slice(1)
+        }
+    })
+    return newArray.join("")
+}
+console.log(camelize("my-short-string"))
+function filterRange(arr, a, b) {
+    return arr.filter((item) => {
+        return a <= item && item <= b
+    })
+}
+let arr = [5, 3, 8, 1];
+
+let filtered = filterRange(arr, 1, 4);
+
+console.log( filtered ); // 3,1 (совпадающие значения)
+
+console.log( arr ); // 5,3,8,1 (без изменений)
+let arr1 = ["HTML", "JavaScript", "CSS"];
+function copySorted(arr) {
+    let sortedArr = arr.slice() 
+    return sortedArr.sort()
+}
+
+let sorted = copySorted(arr1);
+
+console.log( sorted ); // CSS, HTML, JavaScript
+console.log( arr1 ); // HTML, JavaScript, CSS (без изменений)
+let users1 = [
+    {id: 1, name: "Вася"},
+    {id: 2, name: "Петя"},
+    {id: 3, name: "Маша"},
+    {id: 1, name: "Маша"}
+  ];
+  let usersNames = users1.map((item) => {//map возвращает массив
+    return item.name 
+  })
+  console.log(usersNames)
+//   дан массив каких то чисел. написать функцию getPow(arr)
+//    которая вернет новый массив из квадратов этих чисел. кважрат - это 2 ** 2, то есть 2 в степени 2
+
+
+// let users = [ vasya, petya, masha ];
+// отфильтровать и оставить только тех пользователей возраст которых больше 27
+
+
+// дан массив строк разных длин, отфильтровать и оставить только те длина у которых больше 5 символов
+
+
+// сделать функцию которая вовращает строчку задом наперед
+//  reverseStr(str) ('карина'=>'анирак') пригодится split reverse и join
