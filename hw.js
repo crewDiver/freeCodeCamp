@@ -153,7 +153,7 @@ let names = "Ann, Nick, Anton"
 let namesArray = names.split(",")//по указанному разделителю переводит строку в массив элементов
 console.log(namesArray)
 let word = "word"
-console.log(word.split(""))//разделяет по символам
+console.log(word.split(""))//разделяет по символам. массив из символов
 console.log(namesArray.join(":"))//из массива делает строку с указанным разделителм
 //Напиши функцию camelize(str), которая преобразует строки вида «my-short-string» в «myShortString».
 function camelize(str) {
