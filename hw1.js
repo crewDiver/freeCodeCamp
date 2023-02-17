@@ -61,7 +61,8 @@ function environment(arr) {
 }
 
 console.log(environment(arr))
-const sum = digits.reduce((newArr, item) => {
+const sum = digits.reduce((newArr, item) => { //похоже на map, но первым мы указываем новую перемнную,
+//которую будем изменять, и он так же пройдётся по всем элементам массива
     if (item %2 !== 0) {
         newArr.push(item)
     }
