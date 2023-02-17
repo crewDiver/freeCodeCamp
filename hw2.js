@@ -42,4 +42,30 @@ function average(arr) {
       },[])
 //здесь должно быть среднее арифметическое
 }
-
+comsole.log(average(sums))
+//вторая задача
+const sums1 = [
+    [1, 5, 6],
+    [7, 2, 4, 6],
+    [7, 10, 1],
+    [1, 3]
+]
+const sums2 = [
+    [2, 4, 11],
+    [1, 2, 5, 6],
+    [3, 10, 1],
+    [1, 6, 1]
+]
+function comparison(arr1, arr2) {
+    arr1.reduce((oddArr1, item) => {
+        oddArr1.push(item)
+    }[])
+}
+//третья задача
+function getDigitsSum(numb) {
+   let digits = numb.split("")
+   return digits.map((item) => {
+    return item +=
+   }) 
+}
+console.log(getDigitsSum(302))
