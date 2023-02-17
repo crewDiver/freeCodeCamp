@@ -99,3 +99,12 @@ function reverseWords(str) {
   console.log(reverseWords("double  spaces"))
 //   "This is an example!" ==> "sihT si na !elpmaxe"
 // "double  spaces"      ==> "elbuod  secaps"
+function century(year) {
+    let vek = year %100
+    if (vek == 0) {
+        return year / 100
+    } else {
+        return Math.ceil(year / 100)
+    }
+} 
+console.log(century(988))
